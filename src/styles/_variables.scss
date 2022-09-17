@@ -1,0 +1,15 @@
+$color-green: #8be678;
+$color-darkgreen: #93cc6f;
+$color-orange: #f8a058;
+$color-pink: #c8b8d4;
+$color-yellow: #fff500;
+$color-grey: #c4c4c4;
+$color-blue: #1136ee;
+$color-primarybg: #e9eaea;
+$color-navcurrent: #88e4ff;
+
+$target: 1140;
+@function get-vw($target) {
+	$vw-context: (1000 * 0.01) * 1px;
+	@return ($target/$vw-context) * 1vw;
+}

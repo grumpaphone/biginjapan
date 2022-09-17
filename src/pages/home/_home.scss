@@ -1,0 +1,72 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixins.scss';
+
+.hero {
+	display: grid;
+	grid-template-rows: 1fr 3fr 1fr;
+	place-items: center;
+	height: 97.5vh;
+	width: 90%;
+	// background-color: $color-grey;
+	&__logo {
+		grid-row: 2;
+		width: 80%;
+	}
+}
+
+video {
+	object-fit: fill;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+#keepscrolling {
+	display: flex;
+	justify-content: center;
+	grid-row: 3;
+	width: 100%;
+	z-index: 1;
+}
+
+#keepscrolling__img {
+	position: relative;
+	bottom: 25px;
+	width: 10%;
+}
+
+.parent_container {
+	position: relative;
+}
+
+.video_container {
+	z-index: -1;
+	height: 97.5vh;
+}
+
+.hero_container {
+	display: flex;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	top: 0;
+	z-index: 1;
+	// margin: auto;
+}
+
+------------------------------ABOUT SECTION------------------------------//
+.info {
+	background-color: $color-primarybg;
+}
+
+.info__heading {
+	font-size: 9.5vw;
+	font-size: 90px;
+	font-family: 'Alte Haas Grotesk';
+	font-style: normal;
+	font-weight: 700;
+	line-height: 100px;
+	text-justify: inter-word;
+	padding: 75px 75px;
+}

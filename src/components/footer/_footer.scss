@@ -1,0 +1,159 @@
+@import 'src/styles/_variables.scss';
+
+footer {
+	background-color: $color-yellow;
+	padding: 1vw 5vw;
+	width: 100%;
+	p {
+		font-family: CircularXX Mono;
+		font-size: 15px;
+		line-height: 18.45px;
+		letter-spacing: -0.02em;
+		text-align: center;
+		padding: 10px 5vw;
+		margin-bottom: 3.5vw;
+	}
+	h2 {
+		font-family: Alte Haas Grotesk;
+		font-size: 2.9vw;
+		font-weight: 700;
+		line-height: 3.5vw;
+		letter-spacing: -0.02em;
+		overflow: hidden;
+	}
+}
+
+.footer-div {
+	width: 100%;
+}
+
+.footersection {
+	display: flex;
+	align-items: center;
+}
+
+form {
+	display: flex;
+	flex-direction: row;
+}
+input[type='text'] {
+	width: 316px;
+	height: 49px;
+	background: #ffffff;
+	border: 3px solid #000000;
+	border-radius: 15px;
+	font-family: CircularXX Mono;
+	font-size: 14px;
+	text-align: center;
+	margin-right: 20px;
+	color: #a7a7a7;
+}
+
+input[type='submit'] {
+	font-family: CircularXX Mono;
+	font-size: 14px;
+	border: 3px solid #000000;
+	border-radius: 15px;
+	width: 144px;
+	height: 49px;
+	background: #8fd8f5;
+	cursor: pointer;
+	&:hover {
+		background: darken(#8fd8f5, 15%);
+	}
+}
+
+button {
+	font-family: CircularXX Mono;
+	font-size: 14px;
+	border: 3px solid #000000;
+	border-radius: 15px;
+	width: 144px;
+	height: 49px;
+	background: $color-orange;
+	margin-left: 20px;
+	cursor: pointer;
+	&:hover {
+		background: darken($color-orange, 15%);
+	}
+	&#tiktok {
+		background: $color-darkgreen;
+		&:hover {
+			background: darken($color-darkgreen, 15%);
+		}
+	}
+	&#email {
+		background: $color-pink;
+		&:hover {
+			background: darken($color-pink, 15%);
+		}
+	}
+}
+
+#line--footer {
+	height: 1px;
+	width: 100%;
+	background-color: black;
+	position: relative;
+	z-index: 0;
+	margin-bottom: 1vw;
+	margin-top: 1vw;
+	width: 100%;
+}
+
+// -------------------------BREAKPOINTS-------------------------//
+
+@media only screen and (min-width: 0px) and (max-width: 1024px) {
+	button {
+		width: 123px;
+		padding: 0;
+		margin: 20;
+		grid-column-start: 3;
+		grid-column: auto;
+	}
+
+	.footer-div form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 231px;
+	}
+	.footer-div {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	form {
+		margin: 0px 0px 14px 0px;
+	}
+	input[type='text'],
+	input[type='submit'] {
+		margin: 0px 0px 0px 0px;
+		width: 316px;
+	}
+
+	.footer__subheading {
+		// padding: 10px;
+		text-align: center;
+		font-size: 23px;
+		line-height: 28px;
+		grid-column-start: 1;
+		grid-column-end: 3;
+		align-items: center;
+		justify-content: center;
+	}
+	.email {
+		grid-column-start: 3;
+		grid-column: span 2;
+	}
+	.footersection {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		flex-direction: column;
+	}
+}

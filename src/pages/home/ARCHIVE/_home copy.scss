@@ -1,0 +1,48 @@
+
+@import "src/styles/_variables.scss";
+@import "src/styles/_mixins.scss";
+
+.hero {
+	display: grid;
+	grid-template-rows: 1fr 3fr 1fr;
+	place-items: center;
+	height: 97.5vh;
+	width: 100%;
+	background-color: $color-grey;
+	&__logo {
+		grid-row: 2;
+		width: 80%;
+	}
+}
+
+
+#keepscrolling {
+	display: flex;
+	justify-content: center;
+	grid-row: 3;
+	width: 100%;
+}
+
+#keepscrolling__img {
+	position: relative;
+	bottom: 25px;
+	width: 10%;
+}
+
+// ------------------------------ABOUT SECTION------------------------------//
+.about {
+	letter-spacing: -0.02em;
+	font-family: 'Alte Haas Grotesk';
+	font-weight: 700;
+	text-justify: inter-word;
+	background-color: $color-primarybg;
+	padding: 75px 75px;
+	line-height: 1;
+	h1 {
+		font-size: 9.5vw;
+	}
+	&__ourstorytext {
+		color: #0e9a48;
+		margin: 0 72px;
+	}
+}
